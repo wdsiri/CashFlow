@@ -33,4 +33,10 @@
     <string name="email">Email</string>
     <string name="name">Name</string>
     <string name="create_account">Create Account</string>
+    <string name="y">Y</string>
+    <string name="m">M</string>
+    <string name="w">W</string>
+    <string name="d">D</string>
+    <string name="_0_00">$0.00</string>
+    <string name="recent_transactions">Recent Transactions:</string>
 </resources>
