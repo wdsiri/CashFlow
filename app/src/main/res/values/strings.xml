@@ -42,4 +42,10 @@
     <string name="first_name">First Name</string>
     <string name="email_quinnipiac_edu">email@quinnipiac.edu</string>
     <string name="first_last">First Last</string>
+    <string name="new_transaction">New Transaction</string>
+    <string name="mm_dd_yyyy">MM/DD/YYYY</string>
+    <string name="transaction_amount">Transaction Amount</string>
+    <string name="transaction_title">Transaction Title</string>
+    <string name="submit_transaction">Submit Transaction</string>
+    <string name="back">Back</string>
 </resources>
