@@ -3,23 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/loginFragment2">
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.cashflow.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_transactions"
+            app:destination="@id/nav_transactions" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_transactions"
         android:name="com.example.cashflow.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_transactions_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_transactions_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.cashflow.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_settings_to_nav_transactions"
+            app:destination="@id/nav_transactions" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_settings_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.cashflow.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_signUp22"
+            app:destination="@id/signUp2" />
+        <action
+            android:id="@+id/action_loginFragment2_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp2"
+        android:name="com.example.cashflow.signUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp2_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
 </navigation>
